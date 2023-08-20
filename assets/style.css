@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .logo {
+    position: fixed;
+    width: 150px;
+    left: 10px;
+    top: 10px;
+  }
+  
+  body {
+    background-image: url(./images/mario\ background.jpg);
+    background-position: center center;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .date,
+  .sinopse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    width: 300px;
+    border: #ff8d0a 5px solid;
+    background-color: rgba(61, 54, 54, 0.904);
+    color: #ffffff;
+    position: absolute;
+    top: 20%;
+    border-radius: 30px;
+    opacity: 0.9;
+    padding: 20px;
+    font-family: "Oswald", sans-serif;
+    box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.8), 0px 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .sinopse {
+    left: 10%;
+    font-size: x-large;
+  }
+  
+  .date {
+    right: 10%;
+    font-size: xx-large;
+  }
+  
+  .box {
+    position: relative;
+    top: -50px;
+    width: 100px;
+  }
+  
+  .mario {
+    animation: bounce 4s infinite;
+    width: 150px;
+  }
+  
+  .pipe {
+    width: 100px;
+  }
+  
+  .marioOut {
+    position: fixed;
+    bottom: -100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: -1;
+  }
+  
+  .bullet {
+    position: absolute;
+    bottom: 70px;
+    right: 10px;
+    width: 50px;
+    animation: move 4s linear infinite;
+    z-index: 3;
+  }
+  
+  #boxButton,
+  #shine,
+  .box-sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+  }
+  
+  .box-sign {
+    top: 63%;
+    left: 47.5%;
+    width: 200px;
+    text-align: center;
+    font-size: larger;
+    font-family: "Oswald", sans-serif;
+    border-radius: 10px;
+    background-color: #ff8d0a;
+    color: #ffffff;
+  }
+  
+  #shine {
+    animation: spin 2s infinite linear;
+  }
+  
+  .escurecer {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+  }
+  
+  .trailer {
+    min-height: 50vh;
+    width: 70%;
+    top: 20%;
+    left: 20%;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+  
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-40px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(150px);
+    }
+    100% {
+      transform: translateX(-2000px);
+    }
+  }
+  
+  @keyframes fly {
+    0% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(-600px);
+    }
+  }
+  
+  @keyframes flyLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-600px);
+    }
+  }
+  
+  @keyframes flyRight {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateX(600px);
+    }
+  }
+  
+  @keyframes opacity {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes escurecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
